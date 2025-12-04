@@ -7,6 +7,7 @@ namespace Resources.Objects.Items.Soils {
 			title = "Sandy soil";
 			description = "Soil made of low density dirt";
 			recipe = new Item[] { new ItemMaterialSand(), new ItemMaterialSand() };
+			filtering = 2f;
 		}
 	}
 }

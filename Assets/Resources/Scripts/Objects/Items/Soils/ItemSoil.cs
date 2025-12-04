@@ -3,7 +3,7 @@ using static Resources.Utils.Enums;
 
 namespace Resources.Objects.Items.Soils {
 	public abstract class ItemSoil : Item {
-		public float density;
+		public float filtering;
 		public ItemMaterial[] loot;
 	}
 }

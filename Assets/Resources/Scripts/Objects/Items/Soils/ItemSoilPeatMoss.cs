@@ -7,6 +7,7 @@ namespace Resources.Objects.Items.Soils {
 			title = "Peat moss";
 			description = "Soil made of biomass from decaying plant life.";
 			recipe = new Item[] { new ItemMaterialPeatMoss(), new ItemMaterialPeatMoss() };
+			filtering = 1f;
 		}
 	}
 }
