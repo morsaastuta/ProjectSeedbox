@@ -222,7 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec06982b431d4bab9a156eb6750ac15b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BehaviourCrop
-  crop: {fileID: 0}
+  events:
+    keys: []
   cycle: 0
   withering: 0
   dead: 0
@@ -506,6 +507,55 @@ Transform:
   - {fileID: 1396179228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1104679249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104679251}
+  - component: {fileID: 1104679250}
+  m_Layer: 0
+  m_Name: Crop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1104679250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104679249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec06982b431d4bab9a156eb6750ac15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Resources.Components.Behaviours.Interactables.BehaviourInteractableCrop
+  events:
+    keys: []
+  cycle: 0
+  withering: 0
+  dead: 0
+--- !u!4 &1104679251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104679249}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.53733, y: 0.37899, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120295080
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,10 +660,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985aff9d4c014446b1cbfae6105d380a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BehaviourTile
-  soil: 0
+  events:
+    keys: []
   water: 0
   sunlight: 0
   temperature: 0
+  plowed: 0
+  waterLevel: 0
 --- !u!1 &1144251850
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,50 +838,63 @@ Transform:
   - {fileID: 1120295081}
   m_Father: {fileID: 762604288}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1401396116
-GameObject:
+--- !u!1001 &2438446681494881316
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1401396118}
-  - component: {fileID: 1401396117}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1401396117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401396116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d13ddd11425d4ec4c9d250307a39c0a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!4 &1401396118
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401396116}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.53733, y: 0.37899, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.53733
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.37899
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143778691982502866, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842277027437291933, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e018b928ba53fb54bb72a741f0583b7b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -836,5 +902,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 762604288}
-  - {fileID: 1401396118}
+  - {fileID: 2438446681494881316}
   - {fileID: 1144251852}
+  - {fileID: 1104679251}

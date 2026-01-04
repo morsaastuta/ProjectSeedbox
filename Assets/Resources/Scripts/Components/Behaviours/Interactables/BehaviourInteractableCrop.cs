@@ -3,13 +3,14 @@ using NaughtyAttributes;
 using Resources.Components.Managers;
 using Resources.Objects.Constructs.Crops;
 using Resources.Objects.Items.Seeds;
+using UnityEngine;
 
 namespace Resources.Components.Behaviours.Interactables {
 	public class BehaviourInteractableCrop : BehaviourInteractable {
-		[Dropdown("Crop")] [ReadOnly] public ConstructCrop crop;
-		[Dropdown("Crop")] [ReadOnly] public int cycle = 0;
-		[Dropdown("Crop")] [ReadOnly] public int withering = 0;
-		[Dropdown("Crop")] [ReadOnly] public bool dead = false;
+		[SerializeField] [Foldout("Crop")] [ReadOnly] public ConstructCrop crop;
+		[SerializeField] [Foldout("Crop")] [ReadOnly] public int cycle = 0;
+		[SerializeField] [Foldout("Crop")] [ReadOnly] public int withering = 0;
+		[SerializeField] [Foldout("Crop")] [ReadOnly] public bool dead = false;
 
 		public BehaviourInteractableCrop(ItemSeed seed) {
 			crop = seed.crop;

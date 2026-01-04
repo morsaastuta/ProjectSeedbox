@@ -6,13 +6,13 @@ using UnityEngine.InputSystem;
 
 namespace Resources.Components.Behaviours {
 	public class BehaviourPlayer : MBehaviour {
-		[Dropdown("References")] [SerializeField] protected InputActionAsset inputActions;
-		[Dropdown("References")] [SerializeField] protected Rigidbody2D body;
-		[Dropdown("References")] [SerializeField] protected Animator animator;
-		[Dropdown("Properties")] [ReadOnly] protected Vector2 velocity;
-		[Dropdown("Properties")] [ReadOnly] protected float speed = 1f;
-		[Dropdown("Properties")] [ReadOnly] protected float range = 1f;
-		[Dropdown("Properties")] [ReadOnly] protected BehaviourInteractable interactable;
+		[SerializeField] [Foldout("References")] protected InputActionAsset inputActions;
+		[SerializeField] [Foldout("References")] protected Rigidbody2D body;
+		[SerializeField] [Foldout("References")] protected Animator animator;
+		[SerializeField] [Foldout("Properties")] [ReadOnly] protected Vector2 velocity;
+		[SerializeField] [Foldout("Properties")] [ReadOnly] protected float speed = 1f;
+		[SerializeField] [Foldout("Properties")] [ReadOnly] protected float range = 1f;
+		[SerializeField] [Foldout("Properties")] [ReadOnly] protected BehaviourInteractable interactable;
 
 		// Input system
 		protected InputAction inputMove;
